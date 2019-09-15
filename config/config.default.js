@@ -41,7 +41,21 @@ module.exports = appInfo => {
         app: true,
         // 是否加载到 agent 上，默认关闭
         agent: false,
-};
+  };
+
+  // 跨域同源配置
+  config.security = {
+      csrf: {
+         enable: false,
+         ignoreJSON: true
+      },
+      domainWhiteList: ['http://localhost:3000']
+  };
+  config.cors = {
+    origin:'*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  };
+
   return {
     ...config,
     ...userConfig,

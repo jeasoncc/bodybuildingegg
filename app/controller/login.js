@@ -3,9 +3,9 @@
 const Controller = require('egg').Controller;
 
 class LoginController extends Controller {
-  async loginUser() {
+  async loginUser(username,password) {
     const { ctx } = this;
-    const userInfo = await ctx.service.login.login({username: 'jeason', password: '123456'});
+    const userInfo = await ctx.service.login.login({username: ctx.request.body.username, password: ctx.request.body.password});
     ctx.body = userInfo;
   }
 }
