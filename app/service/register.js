@@ -6,10 +6,10 @@ class RegisterService extends Service {
   //   // 就可以直接通过 this.ctx 获取 ctx 了
   //   // 还可以直接通过 this.app 获取 app 了
   // }
-  async register({username, password}) {
+  async register({username, password,emailaddress,acceptpush}) {
     // 假如 我们拿到用户 id 从数据库获取用户详细信息
     //console.log(this.ctx.app.config.mysql.query())
-    const user = await this.app.mysql.insert('userinfo', { username: username, password: password })
+    const user = await this.app.mysql.insert('userinfo', { username: username, password: password, emailaddress: emailaddress, acceptpush: acceptpush })
    // const users = await this.ctx.mysql.query('select * from user.userinfo' );
 
 
