@@ -13,7 +13,6 @@ class LoginService extends Service {
         username:username,
         password:password
     })
-    console.log(user)
    // const users = await this.ctx.mysql.query('select * from user.userinfo' );
 
 

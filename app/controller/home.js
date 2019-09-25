@@ -6,9 +6,8 @@ class HomeController extends Controller {
   async index() {
     const { ctx } = this;
     const userInfo = await ctx.service.user.find({username: 'jeason', password: '123456'});
-    console.log(2121)
-    ctx.body = userInfo;
-    console.log('2121212')
+    await ctx.render('page/home/index.js', {message: 'egg react server side render'})
+    await ctx.renderClient('home/index.js', {message: 'egg react client render'})
   }
 }
 

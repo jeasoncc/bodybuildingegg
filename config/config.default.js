@@ -63,7 +63,7 @@ module.exports = appInfo => {
 
   config.reactssr = {
     renderOptions: {
-      basedir: path.join(appInfo.baseDir, 'app/view')
+      basedir: path.join(appInfo.baseDir, 'app/web/')
     }
   };
   return {
