@@ -15,12 +15,9 @@ module.exports = {
         enable: true,
         package: 'egg-cors'
     },
-    //react: {
-        //enable:true,
-        //package: 'egg-view-react'
-    //},
-    reactssr: {
+    // 模板插件
+    nunjucks: {
         enable: true,
-        package: 'egg-view-react-ssr'
+        package: 'egg-view-nunjucks'
     }
 };

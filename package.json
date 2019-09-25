@@ -8,15 +8,11 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "babel-loader": "^7.1.5",
     "egg": "^2.15.1",
     "egg-cors": "^2.2.0",
     "egg-mysql": "^3.0.0",
     "egg-scripts": "^2.11.0",
-    "egg-view-react": "^1.1.0",
-    "egg-view-react-ssr": "^2.5.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "egg-view-nunjucks": "^2.2.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -28,13 +24,10 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "cross-env": "^6.0.0",
-    "easywebpack-cli": "^4.6.0",
-    "easywebpack-react": "^4.4.4",
     "egg-bin": "^4.13.0",
     "egg-ci": "^1.11.0",
     "egg-mock": "^3.21.0",
     "egg-webpack": "^4.5.2",
-    "egg-webpack-react": "^2.0.3",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0"
   },

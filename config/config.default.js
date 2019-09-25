@@ -11,7 +11,7 @@ module.exports = appInfo => {
    * @type {Egg.EggAppConfig}
    **/
   const config = exports = {};
-  console.log(appInfo)
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1568185722141_6738';
 
@@ -51,21 +51,24 @@ module.exports = appInfo => {
       },
       domainWhiteList: ['http://localhost:3000']
   };
+
+  // 配置模板文件根目录
+  config.view ={
+    root: [
+        path.join(appInfo.baseDir, 'app/view'),
+        path.join(appInfo.baseDir, 'app/web/page')
+    ].join(','),
+    mapping: {
+        '.nj': 'nunjucks'
+    },
+    defaultViewEngine: '.nj'
+  }
+
   config.cors = {
     origin:'*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
-    // 保证构建的静态资源文件能够被访问到
-  config.static = {
-    prefix: '/public/',
-    dir: path.join(appInfo.baseDir, 'public')
-  };
 
-  config.reactssr = {
-    renderOptions: {
-      basedir: path.join(appInfo.baseDir, 'app/web/')
-    }
-  };
   return {
     ...config,
     ...userConfig,

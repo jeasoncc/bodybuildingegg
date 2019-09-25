@@ -3,12 +3,15 @@
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
-  async index() {
-    const { ctx } = this;
-    const userInfo = await ctx.service.user.find({username: 'jeason', password: '123456'});
-    await ctx.render('page/home/index.js', {message: 'egg react server side render'})
-    await ctx.renderClient('home/index.js', {message: 'egg react client render'})
-  }
+    async server() {
+      const { ctx } = this;
+      // ctx.body = ctx
+       const data = { name: 'egg' };
+     // ctx.body = await ctx.renderString('hi, {{ name }}', data, {
+     //  viewEngine: 'nunjucks',
+    // });
+    await ctx.render('home.nj')
+    }
 }
 
 module.exports = HomeController;
