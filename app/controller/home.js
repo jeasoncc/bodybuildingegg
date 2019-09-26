@@ -6,11 +6,19 @@ class HomeController extends Controller {
     async server() {
       const { ctx } = this;
       // ctx.body = ctx
-       const data = { name: 'egg' };
+      const data = { name: 'egg' };
      // ctx.body = await ctx.renderString('hi, {{ name }}', data, {
      //  viewEngine: 'nunjucks',
     // });
-    await ctx.render('home.nj')
+      const dataList = {
+      name: 'jeason',
+      list: [
+        { id: 1, title: 'this is news 1', url: '/news/1' },
+        { id: 2, title: 'this is news 2', url: '/news/2' }
+       ]
+      };
+    // await ctx.render('home.nj')
+      await ctx.render('home.nj', dataList)
     }
 }
 
