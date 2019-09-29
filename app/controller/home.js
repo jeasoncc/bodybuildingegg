@@ -20,6 +20,13 @@ class HomeController extends Controller {
     // await ctx.render('home.nj')
       await ctx.render('home.nj', dataList)
     }
+
+    async findUser() {
+        const { ctx } = this;
+        const info = await ctx.service.user.find()
+        ctx.body = await  info
+    }
+
 }
 
 module.exports = HomeController;

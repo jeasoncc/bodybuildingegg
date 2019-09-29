@@ -10,6 +10,8 @@ class UserService extends Service {
     // 假如 我们拿到用户 id 从数据库获取用户详细信息
     //console.log(this.ctx.app.config.mysql.query())
     const user = await this.app.mysql.query('select * from userinfo','');
+
+    // const user = await this.app.mysql.get('userinfo')
    // const users = await this.ctx.mysql.query('select * from user.userinfo' );
 
 

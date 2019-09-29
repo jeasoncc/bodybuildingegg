@@ -29,7 +29,7 @@ window.onload = () => {
         removeCloneActionItem()
 
         let shoutCloneNum = e.target.value - 1;
-        if (shoutCloneNum > MAXCLONENUM) {
+        if (shoutCloneNum >== MAXCLONENUM) {
             e.target.value = MAXCLONENUM
             shoutCloneNum = MAXCLONENUM - 1;
         }
