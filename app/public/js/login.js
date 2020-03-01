@@ -12,5 +12,13 @@ $(function() {
     $("#submit").click(() => {
         var user = getUser()
         console.log(user)
+        req("POST")("/finduser")(user)
+        .then(res => {
+            if(!res.isUser) {
+                console.log("error")
+                showTip("account not right")("faile")
+            }
+                showTip("congratulation")("success")
+        })
     })
 })

@@ -10,17 +10,15 @@
                 <button id="reset" class="ml-4 button is-warning is-rounded">Reset</button>
             </div>
         </div>
+
     </body>
     <style type="text/css" media="all">
-    .formWrap{
-        overflow:hidden;
-        width:100vw;
-        height:100vh;
-        background-image:url("https://cdn.pixabay.com/photo/2016/11/21/17/59/blackboard-1846865_1280.jpg")
-    } 
+.formWrap{
+    overflow:hidden;
+    width:100vw;
+    height:100vh;
+    background-image:url("https://cdn.pixabay.com/photo/2016/11/21/17/59/blackboard-1846865_1280.jpg")
+} 
     </style>
-    <script charset="utf-8">
-        console.log(123)
-    </script>
     <script src="/public/js/login.js" defer></script>
 </html>
