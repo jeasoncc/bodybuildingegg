@@ -1,55 +1,26 @@
 <!DOCTYPE HTML>
 <html>
-    <header>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
- 
-        <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="/public/css/a.css"/>
-        <link rel="stylesheet" type="text/css" href="/public/css/test.css"/>
-        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    </header>
-    <body>
-    {{name}}
-    {% for item in list %}
-        <li class="item">
-          <a href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-      <div id="con">sasasasa</div>
-        <div class="container">
-
-          <form class="form-signin">
-            <h2 class="form-signin-heading">Please sign in</h2>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <br />
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me"> Remember me
-              </label>
+    {% include "./component/title.nj" %}
+    <body class="body formWrap bg-no-repeat bg-cover">
+        <div class="container is-fullhd pt-20 sm:w-full xl:w-2/3">
+            <div class="bg-white rounded-lg border notification px-6 pt-10 m-3 shadow-xl   box">
+                <input id="username" class="mb-4 input is-rounded" type="text" placeholder="Rounded input">
+                <input id="password" class="mb-4 input is-rounded" type="text" placeholder="Rounded input">
+                <button id="submit" class="button is-primary is-rounded">Login</button>
+                <button id="reset" class="ml-4 button is-warning is-rounded">Reset</button>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-          </form>
-
-        </div> <!-- /container -->
-
+        </div>
     </body>
-    <script>
-        console.log(1)
+    <style type="text/css" media="all">
+    .formWrap{
+        overflow:hidden;
+        width:100vw;
+        height:100vh;
+        background-image:url("https://cdn.pixabay.com/photo/2016/11/21/17/59/blackboard-1846865_1280.jpg")
+    } 
+    </style>
+    <script charset="utf-8">
+        console.log(123)
     </script>
-      <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-     
+    <script src="/public/js/login.js" defer></script>
 </html>

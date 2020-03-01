@@ -53,6 +53,7 @@ module.exports = appInfo => {
   };
 
   // 配置模板文件根目录
+  console.log(appInfo.baseDir)
   config.view ={
     root: [
         path.join(appInfo.baseDir, 'app/view'),

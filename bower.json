@@ -1,0 +1,16 @@
+{
+  "name": "bodybuilding",
+  "description": "this is a bodybuildg backfront",
+  "main": "",
+  "authors": [
+    "Jeason"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jeasoncc/bodybuildingegg",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "bootstrap": "^4.4.1",
+    "bulma": "^0.8.0"
+  }
+}
