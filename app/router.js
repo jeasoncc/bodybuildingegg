@@ -9,11 +9,14 @@ module.exports = app => {
   *@description 后端路由
   */
   router.get('/', controller.home.server);
-  // 测试
+  router.get('/backfront', controller.backfront.index.server);
+  router.get('/userinfo', controller.backfront.userInfo.server);
+  router.get('/insertactiongrouppage', controller.backfront.insertActionGroup.server);
+  /*
+  *@description 后端接口
+  */
   router.post('/finduser', controller.home.findUser)
 
-  router.get('/backfront', controller.backfront.index.server);
-  router.get('/insertactiongrouppage', controller.backfront.insertActionGroup.server);
  /*
   *@description 前端接口
   */

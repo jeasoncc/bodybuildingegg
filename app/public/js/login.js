@@ -15,10 +15,14 @@ $(function() {
         req("POST")("/finduser")(user)
         .then(res => {
             if(!res.isUser) {
-                console.log("error")
-                showTip("account not right")("faile")
+                return showTip("account not right")("faile")
             }
-                showTip("congratulation")("success")
+            return (() => {
+                setTimeout(() => {
+                    showTip("congratulation")("success");
+                    location.href="/backfront"
+                },1500)
+            })()
         })
     })
 })

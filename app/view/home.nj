@@ -4,13 +4,27 @@
     <body class="body formWrap bg-no-repeat bg-cover">
         <div class="container is-fullhd pt-20 sm:w-full xl:w-2/3">
             <div class="bg-white rounded-lg border notification px-6 pt-10 m-3 shadow-xl   box">
-                <input id="username" class="mb-4 input is-rounded" type="text" placeholder="Rounded input">
-                <input id="password" class="mb-4 input is-rounded" type="text" placeholder="Rounded input">
+                <div class="field">
+                    <p class="control has-icons-left">
+                    <input id="username" class="mb-4 input is-rounded" type="text" placeholder="username">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control has-icons-left">
+
+                    <input id="password" class="mb-4 input is-rounded" type="password" placeholder="password">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                    </p>
+                </div>
                 <button id="submit" class="button is-primary is-rounded">Login</button>
                 <button id="reset" class="ml-4 button is-warning is-rounded">Reset</button>
             </div>
         </div>
-
     </body>
     <style type="text/css" media="all">
 .formWrap{

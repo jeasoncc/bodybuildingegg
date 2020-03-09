@@ -1,72 +1,23 @@
-{% extends "./layout/backfrontTemplate.nj"%}
-
-{% block title %}
-添加健身动作
+{% extends "backfrontindex.nj" %}
+{% block  content%}
+<div class="container p-4">
+<div class="field">
+  <div class="control">
+    <input class="input is-rounded " type="text" placeholder="Part">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input is-rounded " type="text" placeholder="Action Name">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input is-rounded " type="text" placeholder="Number/kg">
+  </div>
+</div>
+<button class="button is-primary is-rounded">Rounded</button>
+<button class="button is-rounded">Rounded</button>
+</div>
 {% endblock %}
 
-{% block jsScripts %}
-<script src="/public/js/insertActionGroup.js"></script>
-{% endblock%}
-
-{% block right%}
-    <form id="form">
-        <!-- Standard button -->
-        <button type="reset" id="resetForm" class="btn btn-default">重置</button>
-        <button type="button" id="pushMyWriteActionGroupBtn" data-toggle="modal" data-target="#myModal" class="btn btn-primary">提交</button>
-        <div class="form-group has-success has-feedback">
-          <label class="control-label" for="inputSuccess2">健身部位</label>
-          <input type="text" class="form-control" name="input" id="inputSuccess1" aria-describedby="inputSuccess2Status">
-          <span id="inputSuccess2Status" class="sr-only">(success)</span>
-        </div>
-        <div class="form-group has-success has-feedback">
-          <label class="control-label" for="inputSuccess2">请输入要添加的健身动作数量</label>
-          <input type="number" step="2" min="0" max="10" name="input" required class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-          <span id="inputSuccess2Status" class="sr-only">(success)</span>
-        </div>
-
-         <div class="form-group has-success has-feedback actionGroup">
-          <label class="control-label" for="inputSuccess2">健身动作</label>
-          <input type="text" class="form-control" name="input" ria-describedby="inputSuccess2Status">
-          <span id="" class="sr-only">(success)</span>
-        </div>
-        
-    </form>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">您将提交以下内容</h4>
-          </div>
-          <div class="modal-body" id="modalBody">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button type="button" class="btn btn-primary">确认提交</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    {#<div class="form-group has-warning has-feedback">#}
-      {#<label class="control-label" for="inputWarning2">健身部位</label>#}
-      {#<input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">#}
-      {#<span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>#}
-      {#<span id="inputWarning2Status" class="sr-only">(warning)</span>#}
-    {#</div>#}
-    {#<div class="form-group has-error has-feedback">#}
-      {#<label class="control-label" for="inputError2">Input with error</label>#}
-      {#<input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">#}
-      {#<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>#}
-      {#<span id="inputError2Status" class="sr-only">(error)</span>#}
-    {#</div>#}
-    {#<div class="form-group has-success has-feedback">#}
-      {#<label class="control-label" for="inputGroupSuccess1">Input group with success</label>#}
-      {#<div class="input-group">#}
-        {#<span class="input-group-addon">@</span>#}
-        {#<input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">#}
-      {#</div>#}
-      {#<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>#}
-      {#<span id="inputGroupSuccess1Status" class="sr-only">(success)</span>#}
-    {#</div>#}
-{% endblock %}

@@ -1,0 +1,23 @@
+<aside class="menu border p-8 w-full xl:h-screen">
+    <p class="menu-label">
+    General
+    </p>
+    <ul class="menu-list">
+        <li><a>User</a></li>
+        <li><a>Client</a></li>
+    </ul>
+    <p class="menu-label">
+    Administration
+    </p>
+    <ul class="menu-list">
+        <li><a href="/insertactiongrouppage">Add action</a></li>
+    </ul>
+    <p class="menu-label">
+    Transactions
+    </p>
+    <ul class="menu-list">
+        <li><a>Payments</a></li>
+        <li><a>Transfers</a></li>
+        <li><a>Balance</a></li>
+    </ul>
+</aside>
